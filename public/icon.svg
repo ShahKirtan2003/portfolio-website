@@ -1,0 +1,10 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:oklch(0.09 0 0);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:oklch(0.12 0.005 0);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bgGradient)" width="180" height="180" rx="40" />
+  <text fill="oklch(0.95 0 0)" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" letter-spacing="-0.02em">KS</text>
+</svg>
