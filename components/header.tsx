@@ -28,7 +28,7 @@ export function Header() {
   }
 
   const copyEmail = () => {
-    const email = "kirtanshah1811@gmail.com"
+    const email = "shahkirtan2003@gmail.com"
     navigator.clipboard.writeText(email)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
