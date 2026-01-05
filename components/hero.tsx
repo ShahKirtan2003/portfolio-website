@@ -12,7 +12,7 @@ export function Hero() {
               Kirtan Shah
             </h1>
             <div className="flex justify-center px-2">
-              <Badge className="px-2 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm md:text-base font-medium bg-zinc-200/80 hover:bg-zinc-200 border-zinc-300 text-zinc-900 dark:bg-zinc-800/50 dark:hover:bg-zinc-800/70 dark:border-zinc-700 dark:text-zinc-100 max-w-full break-words text-center leading-relaxed">
+              <Badge className="whitespace-normal text-wrap px-2 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm md:text-base font-medium bg-zinc-200/80 hover:bg-zinc-200 border-zinc-300 text-zinc-900 dark:bg-zinc-800/50 dark:hover:bg-zinc-800/70 dark:border-zinc-700 dark:text-zinc-100 max-w-full break-words text-center leading-relaxed">
                 SDE2 @ Kickdrum{'\u00A0\u00A0\u00A0'}|{'\u00A0\u00A0\u00A0'}Ex-Sprinklr{'\u00A0\u00A0\u00A0'}|{'\u00A0\u00A0\u00A0'}AWS Solutions Architect
               </Badge>
             </div>

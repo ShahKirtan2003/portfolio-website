@@ -35,12 +35,19 @@ export function Header() {
   }
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-card border-b border-border/40" : "bg-transparent"
-      }`}
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+      {mobileMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black/20 dark:bg-black/40 z-40 md:hidden backdrop-blur-sm"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled ? "glass-card border-b border-border/40" : "bg-transparent"
+        }`}
+      >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex items-center justify-between h-16">
           <button onClick={copyEmail} className="flex items-center gap-2 group relative" title="Click to copy email">
             <div className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-lg border border-border/40 bg-background/50 backdrop-blur-sm transition-all hover:border-primary/40 hover:bg-background/80 cursor-pointer">
@@ -122,29 +129,29 @@ export function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border/40 mt-2">
-            <nav className="flex flex-col gap-4">
+          <div className="md:hidden absolute top-full left-0 right-0 mt-1 mx-4 rounded-lg border border-border/60 bg-background/95 backdrop-blur-lg shadow-xl shadow-black/10 dark:shadow-black/50 animate-in slide-in-from-top-2 duration-200">
+            <nav className="flex flex-col p-4 gap-3">
               <button
                 onClick={() => scrollToSection("experience")}
-                className="text-left text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-left px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-accent/50 rounded-lg transition-all duration-200 hover:translate-x-1"
               >
                 Experience
               </button>
               {/* <button
                 onClick={() => scrollToSection("projects")}
-                className="text-left text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-left px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-accent/50 rounded-lg transition-all duration-200 hover:translate-x-1"
               >
                 Projects
               </button> */}
               <button
                 onClick={() => scrollToSection("skills")}
-                className="text-left text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-left px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-accent/50 rounded-lg transition-all duration-200 hover:translate-x-1"
               >
                 Skills
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="text-left text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-left px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-accent/50 rounded-lg transition-all duration-200 hover:translate-x-1"
               >
                 Contact
               </button>
@@ -153,5 +160,6 @@ export function Header() {
         )}
       </div>
     </header>
+    </>
   )
 }
